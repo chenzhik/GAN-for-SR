@@ -1,0 +1,103 @@
+----------------- Options ---------------
+                batchSize: 1                             
+                    beta1: 0.5                           
+          checkpoints_dir: ./checkpoints                 
+           continue_train: True                          	[default: False]
+                 dataroot: ./datasets/LR2CleanLR         	[default: None]
+             dataset_mode: unaligned                     
+              display_env: main                          
+             display_freq: 400                           
+               display_id: 1                             
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 512                           
+              epoch_count: 1                             
+                 fineSize: 128                           
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                  isTrain: True                          	[default: None]
+                 lambda_A: 10.0                          
+                 lambda_B: 10.0                          
+                 lambda_C: 10.0                          
+                 lambda_D: 10.0                          
+          lambda_identity: 0.5                           
+                 loadSize: 158                           
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: lambda                        
+         max_dataset_size: inf                           
+                    model: cycle_gan                     
+                 nThreads: 4                             
+               n_layers_D: 3                             
+                     name: denoise_cyclegan              	[default: experiment_name]
+                      ndf: 64                            
+                      ngf: 64                            
+                    niter: 100                           
+              niter_decay: 100                           
+               no_dropout: True                          
+                  no_flip: False                         
+                  no_html: False                         
+                 no_lsgan: False                         
+                     norm: instance                      
+                output_nc: 3                             
+                    phase: train                         
+                pool_size: 50                            
+               print_freq: 100                           
+           resize_or_crop: resize_and_crop               
+          save_epoch_freq: 5                             
+         save_latest_freq: 5000                          
+           serial_batches: False                         
+                   suffix:                               
+         update_html_freq: 1000                          
+                  verbose: False                         
+          which_direction: AtoB                          
+              which_epoch: latest                        
+         which_model_netD: basic                         
+         which_model_netG: resnet_9blocks                
+----------------- End -------------------
+dataset [UnalignedDataset] was created
+#training images = 800
+initialize network with normal
+initialize network with normal
+initialize network with normal
+initialize network with normal
+initialize network with normal
+initialize network with normal
+initialize network with normal
+initialize network with normal
+model [CycleGANModel] was created
+loading the model from ./checkpoints/denoise_cyclegan/latest_net_G_A.pth
+loading the model from ./checkpoints/denoise_cyclegan/latest_net_G_B.pth
+loading the model from ./checkpoints/denoise_cyclegan/latest_net_D_A.pth
+loading the model from ./checkpoints/denoise_cyclegan/latest_net_D_B.pth
+loading the model from ./checkpoints/denoise_cyclegan/EDSR_baseline_x4.pt
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+[Network D_A] Total number of parameters : 2.765 M
+[Network D_B] Total number of parameters : 2.765 M
+-----------------------------------------------
+create web directory ./checkpoints/denoise_cyclegan/web...
+(epoch: 1, iters: 100, time: 0.585, data: 0.629) D_A: 0.181 G_A: 0.539 cycle_A: 0.586 idt_A: 0.425 D_B: 0.191 G_B: 0.275 cycle_B: 0.865 idt_B: 0.170 D_C: 0.344 G_C: 0.519 cycle_C: 3.482 idt_C: 0.511 D_D: 0.426 G_D: 0.521 cycle_D: 3.302 idt_D: 1.729 
+(epoch: 1, iters: 200, time: 0.768, data: 0.005) D_A: 0.264 G_A: 0.476 cycle_A: 0.764 idt_A: 0.458 D_B: 0.305 G_B: 0.309 cycle_B: 1.045 idt_B: 0.337 D_C: 0.271 G_C: 0.250 cycle_C: 2.443 idt_C: 0.356 D_D: 0.448 G_D: 0.428 cycle_D: 3.175 idt_D: 1.212 
+(epoch: 1, iters: 300, time: 0.728, data: 0.004) D_A: 0.232 G_A: 0.317 cycle_A: 1.111 idt_A: 0.276 D_B: 0.167 G_B: 0.310 cycle_B: 0.524 idt_B: 0.266 D_C: 0.274 G_C: 0.226 cycle_C: 4.521 idt_C: 0.320 D_D: 0.382 G_D: 0.297 cycle_D: 4.812 idt_D: 2.266 
+(epoch: 1, iters: 400, time: 2.191, data: 0.006) D_A: 0.208 G_A: 0.208 cycle_A: 0.675 idt_A: 0.321 D_B: 0.195 G_B: 0.173 cycle_B: 0.953 idt_B: 0.289 D_C: 0.316 G_C: 0.379 cycle_C: 1.869 idt_C: 0.302 D_D: 0.264 G_D: 0.309 cycle_D: 1.692 idt_D: 0.950 
+(epoch: 1, iters: 500, time: 0.707, data: 0.006) D_A: 0.081 G_A: 0.185 cycle_A: 0.515 idt_A: 0.439 D_B: 0.292 G_B: 0.334 cycle_B: 1.173 idt_B: 0.290 D_C: 0.274 G_C: 0.191 cycle_C: 1.284 idt_C: 0.440 D_D: 0.282 G_D: 0.632 cycle_D: 2.152 idt_D: 0.641 
+(epoch: 1, iters: 600, time: 0.703, data: 0.006) D_A: 0.210 G_A: 0.288 cycle_A: 0.672 idt_A: 0.579 D_B: 0.197 G_B: 0.168 cycle_B: 1.062 idt_B: 0.386 D_C: 0.323 G_C: 0.225 cycle_C: 1.356 idt_C: 0.355 D_D: 0.257 G_D: 0.264 cycle_D: 2.526 idt_D: 0.659 
+(epoch: 1, iters: 700, time: 0.753, data: 0.006) D_A: 0.250 G_A: 0.286 cycle_A: 0.693 idt_A: 0.468 D_B: 0.214 G_B: 0.400 cycle_B: 0.957 idt_B: 0.368 D_C: 0.333 G_C: 0.217 cycle_C: 1.752 idt_C: 0.457 D_D: 0.335 G_D: 0.256 cycle_D: 5.281 idt_D: 0.855 
+(epoch: 1, iters: 800, time: 2.400, data: 0.005) D_A: 0.245 G_A: 0.216 cycle_A: 0.744 idt_A: 0.353 D_B: 0.219 G_B: 0.232 cycle_B: 0.615 idt_B: 0.400 D_C: 0.300 G_C: 0.193 cycle_C: 2.094 idt_C: 0.620 D_D: 0.226 G_D: 0.338 cycle_D: 3.452 idt_D: 1.007 
+End of epoch 1 / 200 	 Time Taken: 574 sec
+learning rate = 0.0002000
+(epoch: 2, iters: 100, time: 0.648, data: 0.897) D_A: 0.245 G_A: 0.199 cycle_A: 1.022 idt_A: 0.310 D_B: 0.239 G_B: 0.280 cycle_B: 0.615 idt_B: 0.353 D_C: 0.246 G_C: 0.226 cycle_C: 2.007 idt_C: 0.420 D_D: 0.290 G_D: 0.316 cycle_D: 2.087 idt_D: 1.044 
+(epoch: 2, iters: 200, time: 0.698, data: 0.005) D_A: 0.297 G_A: 0.214 cycle_A: 0.561 idt_A: 0.655 D_B: 0.304 G_B: 0.215 cycle_B: 1.533 idt_B: 0.588 D_C: 0.232 G_C: 0.313 cycle_C: 3.128 idt_C: 0.460 D_D: 0.292 G_D: 0.227 cycle_D: 2.204 idt_D: 1.613 
+(epoch: 2, iters: 300, time: 0.715, data: 0.005) D_A: 0.270 G_A: 0.249 cycle_A: 0.563 idt_A: 0.212 D_B: 0.286 G_B: 0.176 cycle_B: 0.562 idt_B: 0.240 D_C: 0.294 G_C: 0.216 cycle_C: 1.053 idt_C: 0.580 D_D: 0.306 G_D: 0.355 cycle_D: 2.732 idt_D: 0.516 
+(epoch: 2, iters: 400, time: 2.447, data: 0.006) D_A: 0.280 G_A: 0.285 cycle_A: 0.609 idt_A: 0.274 D_B: 0.216 G_B: 0.175 cycle_B: 0.981 idt_B: 0.477 D_C: 0.255 G_C: 0.199 cycle_C: 1.211 idt_C: 0.532 D_D: 0.256 G_D: 0.261 cycle_D: 1.987 idt_D: 0.612 
+(epoch: 2, iters: 500, time: 0.712, data: 0.006) D_A: 0.183 G_A: 0.334 cycle_A: 1.074 idt_A: 0.335 D_B: 0.239 G_B: 0.204 cycle_B: 1.102 idt_B: 0.448 D_C: 0.246 G_C: 0.274 cycle_C: 1.304 idt_C: 0.212 D_D: 0.351 G_D: 0.326 cycle_D: 2.699 idt_D: 0.668 
+(epoch: 2, iters: 600, time: 0.686, data: 0.009) D_A: 0.204 G_A: 0.210 cycle_A: 0.758 idt_A: 0.424 D_B: 0.310 G_B: 0.137 cycle_B: 1.185 idt_B: 0.283 D_C: 0.297 G_C: 0.280 cycle_C: 1.268 idt_C: 0.304 D_D: 0.253 G_D: 0.468 cycle_D: 1.322 idt_D: 0.612 
+(epoch: 2, iters: 700, time: 0.649, data: 0.007) D_A: 0.232 G_A: 0.201 cycle_A: 0.596 idt_A: 0.353 D_B: 0.266 G_B: 0.215 cycle_B: 0.947 idt_B: 0.240 D_C: 0.276 G_C: 0.262 cycle_C: 1.311 idt_C: 0.216 D_D: 0.302 G_D: 0.263 cycle_D: 1.682 idt_D: 0.669 
+(epoch: 2, iters: 800, time: 1.814, data: 0.009) D_A: 0.264 G_A: 0.556 cycle_A: 1.116 idt_A: 0.303 D_B: 0.246 G_B: 0.167 cycle_B: 0.760 idt_B: 0.442 D_C: 0.296 G_C: 0.255 cycle_C: 1.398 idt_C: 0.433 D_D: 0.357 G_D: 0.382 cycle_D: 2.754 idt_D: 0.694 
+End of epoch 2 / 200 	 Time Taken: 569 sec
+learning rate = 0.0002000
